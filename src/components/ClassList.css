@@ -1,0 +1,74 @@
+.class-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-title h1 {
+  font-size: 1.75rem;
+}
+
+.page-title p {
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+.class-list {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  background-color: var(--color-table);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.class-list th,
+.class-list td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.class-list thead th {
+  font-size: 0.75rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  background-color: rgba(0, 33, 71, 0.06);
+}
+
+.class-list tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.class-list tbody tr:hover {
+  background-color: rgba(74, 144, 226, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .class-list {
+    background-color: var(--color-table-dark);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .class-list th,
+  .class-list td {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .class-list thead th {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .class-list tbody tr:hover {
+    background-color: rgba(49, 131, 224, 0.15);
+  }
+}

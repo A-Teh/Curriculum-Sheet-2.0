@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app {
+    background-color: var(--color-bg-dark);
+  }
+}

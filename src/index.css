@@ -1,0 +1,117 @@
+:root {
+  --font-family: ui-sans-serif, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Light mode */
+  --color-bg: #c0ddf2;
+  --color-text: #000;
+  --color-accent: #4a90e2;
+  --color-table: rgb(208, 228, 243);
+  --color-border: #000;
+
+  /* Dark mode */
+  --color-bg-dark: #002147;
+  --color-text-dark: #e5e5e5;
+  --color-accent-dark: #3183e0;
+  --color-table-dark: #001c3b;
+  --color-border-dark: #e5e5e5;
+
+  /* Sidebar surfaces */
+  --color-sidebar: #b2d2ec;
+  --color-sidebar-dark: #001a3a;
+  --color-hover: rgba(0, 33, 71, 0.08);
+  --color-hover-dark: rgba(255, 255, 255, 0.07);
+
+  /* Layout */
+  --sidebar-width: 260px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid var(--color-text);
+  background-color: var(--color-bg);
+  border-radius: 6px;
+  color: var(--color-text);
+  transition: background 0.2s ease, transform 0.1s ease;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+td, th, thead {
+  border: 1px solid var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+
+  a {
+    color: var(--color-text-dark);
+  }
+
+  a:hover {
+    color: var(--color-accent-dark);
+  }
+
+  button {
+    border-color: var(--color-text-dark);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+
+  td, th, thead {
+    border: 1px solid var(--color-text-dark);
+  }
+}
